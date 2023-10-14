@@ -1,130 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
-
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap");
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Sora", sans-serif;
 }
 
-/* Add some styles for body*/
 body {
-    min-height: 100vh;
-    max-width: 1280px;
-    margin: 0 auto;
-    background: #020617;
-    color: #cbd5e1;
-    font-family: 'Sora', sans-serif;
-    line-height: 1.5;
-    background-image: radial-gradient(#0f172a 1px,transparent 0),radial-gradient(#0f172a 1px,transparent 0);
-    background-position: 0 0,25px 25px;
-    background-attachment: fixed;
-    background-size: 50px 50px;
-    overflow-x: hidden;
-    padding: 4rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+  background-color: #fafaf9;
+  padding: 0 10px;
+  padding-top: 164px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-
+.card {
+  background-color: #fff;
+  max-width: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.05);
 }
 
-.get-started {
-    padding: 1rem 2rem;
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 2rem;
-    font-size: 0.875rem;
-    font-weight: 200;
-    width: 100%;
-    text-align: center;
+.card__main {
+  padding: 16px;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.5rem;
-    column-gap: 1.5rem;
+.card__image {
+  min-width: 100%;
+  aspect-ratio: 16/8;
+  position: relative;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: inset 0 0 11px 2px rgba(0 0 0 /0.2);
 }
 
-.title {
-    position: relative;
-    text-align: center;
+.card__image img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.25s ease-out;
+  cursor: pointer;
 }
 
-.title::after {
-    content: "";
-    background: url('../images/blur-bg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    bottom: -130px;
-    right: -75px;
-    width: 500px;
-    height: 250px;
-    opacity: 0.5;
+.card__chip {
+  background-color: #e6d6fc;
+  text-align: center;
+  margin-top: 1em;
+  margin-right: auto;
+  display: inline-block;
+  color: #883ae1;
+  border-radius: 1rem;
+  padding: 5px 16px;
+  font-size: 0.7rem;
+  font-weight: 500;
 }
 
-.logo {
-    display: none;
+.card__content {
+  padding-top: 16px;
 }
 
-
-.link-card {
-    padding: 1rem;
-    border: 0.5px solid transparent;
-    transition: all ease-in-out 50ms;
-    cursor: pointer;
+.card__title {
+  font-size: 1.125rem;
+  color: #20293a;
 }
 
-.link-card:hover {
-    border: 0.5px solid #1e293b;
-    background-color: #94a3b817;
-    border-radius: 8px;
+.card__body {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  margin-top: 6px;
+  color: #6c727f;
+  line-height: 20px;
+  max-width: 30ch;
 }
 
-.link-title {
-    font-size: 1.125rem;
+.card__footer {
+  padding: 20px 16px;
+  border-top: 2px solid #e5eaf0;
 }
 
-.link-description {
-    font-size: 0.875rem;
-    font-weight: 200;
-    margin-top: 0.5rem;
-    color: #94a3b8;
+.card__footer p {
+  font-size: 0.85rem;
+  color: #6c727f;
 }
 
-@media screen and (min-width: 720px) {
-    .logo {
-        display: initial;
-    }
-
-    .get-started {
-        width: auto;
-    }
-
-    main {
-        flex-direction: row;
-    }
-
-    footer {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-
-  }
+.card__image:hover img {
+  scale: 1.1;
+  transition: scale 0.25s ease-in;
+}
