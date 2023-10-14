@@ -20,8 +20,7 @@ body {
 
 .card {
   background-color: #fff;
-  max-width: 400px;
-  aspect-ratio: 16/17;
+  max-width: 350px;
 
   margin: 0 auto;
   overflow: hidden;
